@@ -1,7 +1,6 @@
-﻿using ConsoleApp;
-using System.Diagnostics;
-using ConsoleApp.Scrapping.Scrappers;
-using ConsoleApp.WebSites.Sites;
+﻿using System.Diagnostics;
+using logic.Scrapping.Scrappers;
+using logic.WebSites.Sites;
 
 public class AutomateScrape
 {

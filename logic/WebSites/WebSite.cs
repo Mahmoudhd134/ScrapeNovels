@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp.WebSites
+﻿namespace logic.WebSites
 {
     public abstract class WebSite<T>
     {

@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp.Scrapping;
+﻿namespace logic.Scrapping;
 
 public interface IScrapper<T>
 {

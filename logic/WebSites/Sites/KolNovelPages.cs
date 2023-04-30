@@ -1,6 +1,6 @@
 ﻿using HtmlAgilityPack;
 
-namespace ConsoleApp.WebSites.Sites;
+namespace logic.WebSites.Sites;
 
 public class KolNovelPages : WebSite<IEnumerable<(string page, string title)>>
 {

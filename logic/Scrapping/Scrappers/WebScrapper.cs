@@ -1,6 +1,6 @@
-﻿using ConsoleApp.WebSites;
+﻿using logic.WebSites;
 
-namespace ConsoleApp.Scrapping.Scrappers
+namespace logic.Scrapping.Scrappers
 {
     public class WebScrapper<T> : IScrapper<T>
     {
