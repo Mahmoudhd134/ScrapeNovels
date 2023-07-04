@@ -1,2 +1,3 @@
 C:\Users\nasse\OneDrive\Desktop\KolNovel\ConsoleApp.pdb
+C:\Users\nasse\OneDrive\Desktop\KolNovel\logic.pdb
 C:\Users\nasse\OneDrive\Desktop\KolNovel\ConsoleApp.exe

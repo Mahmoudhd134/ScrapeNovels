@@ -396,3 +396,5 @@ C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\obj\Release\net7.0\win-
 C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\obj\Release\net7.0\win-x64\ConsoleApp.pdb
 C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\obj\Release\net7.0\win-x64\ConsoleApp.genruntimeconfig.cache
 C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\obj\Release\net7.0\win-x64\ref\ConsoleApp.dll
+C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Release\net7.0\win-x64\logic.dll
+C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Release\net7.0\win-x64\logic.pdb

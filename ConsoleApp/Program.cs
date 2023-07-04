@@ -16,15 +16,19 @@
 // Console.Write("Enter the number of white spaces between each line (1,2,3...) >> ");
 // var whiteLinesBetweenLines = int.Parse(Console.ReadLine() ?? "");
 
-var dir = @"C:\Users\nasse\OneDrive\Desktop\KolNovel\t t\g t";
+using logic.Automating;
+using logic.Automating.Scrapers;
+
+var dir = @"C:\Users\nasse\OneDrive\Desktop\KolNovel\nano machine";
 // var dir = @"./ff jj/aa f";
-var url = "https://kolnovel.com/series/the-kings-avatar-for-the-glory/";
-var fontSize = "3em";
+var url = "https://riwyat.com/novel/nano-machine/";
+var fontSize = "3.5em";
 var whiteLinesBetweenLines = 1;
-var numberOfChaptersPerFile = 7;
+var numberOfChaptersPerFile = 100;
 try
 {
-    var scrapper = new AutomateScrape(url, dir, fontSize, whiteLinesBetweenLines, numberOfChaptersPerFile);
+    AutomateScrape scrapper = new KolNovelAutomateScrape(url, dir, fontSize, whiteLinesBetweenLines, numberOfChaptersPerFile);
+    // AutomateScrape scrapper = new RiwyatAutomateScrape(url, dir, fontSize, whiteLinesBetweenLines, numberOfChaptersPerFile);
     await scrapper.Start();
 }
 catch (Exception e)

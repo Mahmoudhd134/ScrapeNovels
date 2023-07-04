@@ -96,11 +96,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\consoleapp\\ConsoleApp.csproj",
+      "projectUniqueName": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj",
       "projectName": "ConsoleApp",
-      "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\consoleapp\\ConsoleApp.csproj",
+      "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\nasse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\consoleapp\\obj\\",
+      "outputPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nasse\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -2,13 +2,13 @@
 
 namespace logic.WebSites.Sites;
 
-public class KolNovelPages : WebSite<IEnumerable<(string page, string title)>>
+public class KolNovelPages : WebSite<IEnumerable<(string url, string title)>>
 {
     public KolNovelPages(string url) : base(url)
     {
     }
 
-    public override Task<IEnumerable<(string page, string title)>> Parse(string html)
+    public override Task<IEnumerable<(string url, string title)>> Parse(string html)
     {
         var htmlDocument = new HtmlDocument();
         htmlDocument.LoadHtml(html);
