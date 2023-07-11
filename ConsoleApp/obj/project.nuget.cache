@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "cITDjUiT5lySMlAcHuavXTpnv99NMifyv6kKfaPTfR5JJU9N8ajB5lcEZWqcgiL8rHx5F+UmzbZ3u5C6Bu8EWQ==",
+  "dgSpecHash": "FVpPBLrrrgYZHlxb3EMSpFFVOajn1dZFBJ8v2HrDnrALoqRcKy9oyN5xQvslXwCpyZ4yfJ0mD2BRwjCF/XJjlQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\nasse\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512"
+    "C:\\Users\\nasse\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512",
+    "C:\\Users\\nasse\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.3\\microsoft.netcore.app.runtime.win-x64.7.0.3.nupkg.sha512",
+    "C:\\Users\\nasse\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.3.nupkg.sha512",
+    "C:\\Users\\nasse\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.3\\microsoft.aspnetcore.app.runtime.win-x64.7.0.3.nupkg.sha512",
+    "C:\\Users\\nasse\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\7.0.3\\microsoft.netcore.app.crossgen2.win-x64.7.0.3.nupkg.sha512"
   ],
   "logs": []
 }
