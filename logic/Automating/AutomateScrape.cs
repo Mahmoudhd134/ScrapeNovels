@@ -1,3 +1,5 @@
+using logic.WebSites;
+
 namespace logic.Automating;
 
 public abstract class AutomateScrape
@@ -6,41 +8,39 @@ public abstract class AutomateScrape
     protected readonly string _dir;
     protected readonly string _fontSize;
     protected readonly int _whiteLinesBetweenLines;
-    protected readonly int _numberOfChaptersPerFile;
 
-    public AutomateScrape(string url, string dir, string fontSize, int whiteLinesBetweenLines,
-        int numberOfChaptersPerFile)
+    public AutomateScrape(string url, string dir, string fontSize, int whiteLinesBetweenLines)
     {
         _url = url;
         _dir = dir;
         _fontSize = fontSize;
         _whiteLinesBetweenLines = whiteLinesBetweenLines;
-        _numberOfChaptersPerFile = numberOfChaptersPerFile;
     }
 
-    public abstract Task<IList<(string url, string title)>> GetPages();
+    public abstract Task<IList<ChapterLinkInfo>> GetAllPages();
+    public abstract Task<IList<VolumeLinkInfo>> GetVolumePages();
     public abstract Task<IEnumerable<string>> GetChapter(string url);
 
-    public virtual async Task Start()
+    public virtual async Task StartWithNoVolumesSeparators(int numberOfChaptersPerFile)
     {
         UtilityFunctions.CheckDirectory(_dir);
-        var pages = await GetPages();
+        var pages = await GetAllPages();
         var chapters = new List<IEnumerable<string>>();
         var i = 0;
         string fileName;
         for (; i < pages.Count; i++)
         {
-            if (i % _numberOfChaptersPerFile == 0 && i != 0)
+            if (i % numberOfChaptersPerFile == 0 && i != 0)
             {
-                fileName = $@"{_dir}\HTMLs\{i + 1 - _numberOfChaptersPerFile}-{i}.html";
+                fileName = $@"{_dir}\HTMLs\{i + 1 - numberOfChaptersPerFile}-{i}.html";
                 await UtilityFunctions.Write(chapters, fileName, _whiteLinesBetweenLines, _fontSize, _dir);
                 chapters = new List<IEnumerable<string>>();
             }
 
             var page = pages[i];
 
-            var chapter = (await GetChapter(page.url))
-                .Append(UtilityFunctions.Repeat("-", 100)).ToList().Prepend(page.title + "\n");
+            var chapter = (await GetChapter(page.Url))
+                .Append(UtilityFunctions.Repeat("-", 100)).ToList().Prepend(page.Title + "\n");
 
 
             chapters.Add(chapter);
@@ -48,8 +48,30 @@ public abstract class AutomateScrape
         }
 
         fileName =
-            $@"{_dir}\HTMLs\{i + 1 - (i % _numberOfChaptersPerFile == 0 ? _numberOfChaptersPerFile : i % _numberOfChaptersPerFile)}-{i}.html";
+            $@"{_dir}\HTMLs\{i + 1 - (i % numberOfChaptersPerFile == 0 ? numberOfChaptersPerFile : i % numberOfChaptersPerFile)}-{i}.html";
         await UtilityFunctions.Write(chapters, fileName, _whiteLinesBetweenLines, _fontSize, _dir);
         UtilityFunctions.PrintProgress(i, pages.Count);
+    }
+
+    public virtual async Task StartWithVolumesSeparators()
+    {
+        UtilityFunctions.CheckDirectory(_dir);
+        var volumes = await GetVolumePages();
+        var last = 0;
+        foreach (var volume in volumes)
+        {
+            var chapters = new List<IEnumerable<string>>();
+            foreach (var chapter in volume.Chapters)
+            {
+                chapters.Add((await GetChapter(chapter.Url))
+                    .Append(UtilityFunctions.Repeat("-", 100))
+                    .ToList()
+                    .Prepend(chapter.Title + "\n"));
+            }
+
+            var fileName = $@"{_dir}\HTMLs\{last + 1}-{last += volume.Chapters.Count()}.html";
+            await UtilityFunctions.Write(chapters, fileName, _whiteLinesBetweenLines, _fontSize, _dir);
+            // UtilityFunctions.PrintProgress(i + 1, pages.Count, false);
+        }
     }
 }

@@ -2,13 +2,13 @@
 
 namespace logic.WebSites.Sites;
 
-public class KolNovelPages : WebSite<IEnumerable<(string url, string title)>>
+public class KolNovelAllPages : WebSite<IEnumerable<ChapterLinkInfo>>
 {
-    public KolNovelPages(string url) : base(url)
+    public KolNovelAllPages(string url) : base(url)
     {
     }
 
-    public override Task<IEnumerable<(string url, string title)>> Parse(string html)
+    public override Task<IEnumerable<ChapterLinkInfo>> Parse(string html)
     {
         var htmlDocument = new HtmlDocument();
         htmlDocument.LoadHtml(html);
@@ -17,8 +17,12 @@ public class KolNovelPages : WebSite<IEnumerable<(string url, string title)>>
             .SelectMany(d => d.Descendants("li"))
             .SelectMany(li => li.Descendants("a"))
             .Where(a => a.GetAttributeValue("href", "").Equals("") == false)
-            .Select(a => (a.GetAttributeValue("href", ""), a.InnerText))
-            .Where(h => string.IsNullOrWhiteSpace(h.Item1 ?? "") == false).Reverse();
-        return Task.FromResult<IEnumerable<(string, string)>>(links);
+            .Select(a => new ChapterLinkInfo()
+            {
+                Title = a.InnerText,
+                Url = a.GetAttributeValue("href", "")
+            })
+            .Where(c => string.IsNullOrWhiteSpace(c.Url ?? "") == false).Reverse();
+        return Task.FromResult(links);
     }
 }

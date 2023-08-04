@@ -17,7 +17,8 @@ public class KolNovel : WebSite<IEnumerable<string>>
 
         var titles = GetTitles(htmlDocument);
 
-        var spannedClassesAndIds = GetClassAndIdsInStyleTags(htmlDocument);
+        var spannedClassesAndIds = GetClassAndIdsInStyleTags(htmlDocument)
+            .ToHashSet();
         var chapter = htmlDocument.DocumentNode.Descendants("p")
             .Where(n => spannedClassesAndIds.Contains(n.GetAttributeValue("class", "GGGAAAXXX")) == false)
             .Select(n => HttpUtility.HtmlDecode(n.InnerText))
@@ -38,19 +39,20 @@ public class KolNovel : WebSite<IEnumerable<string>>
             .FirstOrDefault(div => div.GetAttributeValue("class", "NO").Equals("cat-series"))?
             .InnerText ?? "";
 
-        var anotherTwoTitles = string.Join(" , ", htmlDocument.DocumentNode.Descendants("p")
-            .Where(p => p.GetAttributeValue("style", "NO").Equals("text-align: center;") ||
-                        p.GetAttributeValue("style", "NO").Equals("text-align: left"))
-            .Select(p => p.InnerText));
+        // var anotherTwoTitles = string.Join(" , ", htmlDocument.DocumentNode.Descendants("p")
+        //     .Where(p => p.GetAttributeValue("style", "NO").Equals("text-align: center;") ||
+        //                 p.GetAttributeValue("style", "NO").Equals("text-align: left"))
+        //     .Select(p => p.InnerText));
 
-        return HttpUtility.HtmlDecode($"{entryTitle}\n{mainTitle}\n{anotherTwoTitles}");
+        // return HttpUtility.HtmlDecode($"{entryTitle}\n{mainTitle}\n{anotherTwoTitles}");
+        return HttpUtility.HtmlDecode($"{entryTitle}\n{mainTitle}\n\n");
     }
 
     private IEnumerable<string> GetClassAndIdsInStyleTags(HtmlDocument htmlDocument)
     {
         var styleTags = string.Join("\n", htmlDocument.DocumentNode.Descendants("style")
             .Select(n => n.InnerText));
-        var filter = new Regex(@"[.#][^\s{]+");
+        var filter = new Regex(@"[.#][^\s{,]+");
         return filter.Matches(styleTags).Select(m => string.Join("", m.Value.Skip(1)));
     }
 }

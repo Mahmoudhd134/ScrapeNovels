@@ -23,8 +23,8 @@ public class HomeController : Controller
     public async Task<IActionResult> GetKolNovel(string url, string fontSize, string dir, int whiteLinesBetweenLines,
         int numberOfChaptersPerFile)
     {
-        AutomateScrape kolNovel = new KolNovelAutomateScrape(url, dir, fontSize, whiteLinesBetweenLines, numberOfChaptersPerFile);
-        await kolNovel.Start();
+        AutomateScrape kolNovel = new KolNovelAutomateScrape(url, dir, fontSize, numberOfChaptersPerFile);
+        await kolNovel.StartWithNoVolumesSeparators(whiteLinesBetweenLines);
         ViewBag.url = url;
         ViewBag.fontSize = fontSize;
         ViewBag.dir = dir;
@@ -32,12 +32,12 @@ public class HomeController : Controller
         ViewBag.numberOfChaptersPerFile = numberOfChaptersPerFile;
         return View("Index");
     }
-    
+
     public async Task<IActionResult> GetRiwyat(string url, string fontSize, string dir, int whiteLinesBetweenLines,
         int numberOfChaptersPerFile)
     {
-        AutomateScrape kolNovel = new RiwyatAutomateScrape(url, dir, fontSize, whiteLinesBetweenLines, numberOfChaptersPerFile);
-        await kolNovel.Start();
+        AutomateScrape kolNovel = new RiwyatAutomateScrape(url, dir, fontSize, numberOfChaptersPerFile);
+        await kolNovel.StartWithNoVolumesSeparators(whiteLinesBetweenLines);
         ViewBag.url = url;
         ViewBag.fontSize = fontSize;
         ViewBag.dir = dir;
