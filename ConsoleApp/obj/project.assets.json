@@ -15,17 +15,28 @@
           }
         }
       },
-      "logic/1.0.0": {
+      "Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "Domain": "1.0.0",
           "HtmlAgilityPack": "1.11.46"
         },
         "compile": {
-          "bin/placeholder/logic.dll": {}
+          "bin/placeholder/Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/logic.dll": {}
+          "bin/placeholder/Application.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
         }
       }
     }
@@ -79,15 +90,20 @@
         "lib/uap10.0/HtmlAgilityPack.pri"
       ]
     },
-    "logic/1.0.0": {
+    "Application/1.0.0": {
       "type": "project",
-      "path": "../logic/logic.csproj",
-      "msbuildProject": "../logic/logic.csproj"
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "logic >= 1.0.0"
+      "Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -115,8 +131,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\logic\\logic.csproj": {
-              "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\logic\\logic.csproj"
+            "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\Application.csproj"
             }
           }
         }

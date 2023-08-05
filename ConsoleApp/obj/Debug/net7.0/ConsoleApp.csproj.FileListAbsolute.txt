@@ -32,5 +32,7 @@ C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\obj\Debug\net7.0\refint
 C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\obj\Debug\net7.0\ConsoleApp.pdb
 C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\obj\Debug\net7.0\ConsoleApp.genruntimeconfig.cache
 C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\obj\Debug\net7.0\ref\ConsoleApp.dll
-C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\consoleapp\bin\Debug\net7.0\logic.dll
-C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\consoleapp\bin\Debug\net7.0\logic.pdb
+C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Application.dll
+C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Domain.dll
+C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Application.pdb
+C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Domain.pdb

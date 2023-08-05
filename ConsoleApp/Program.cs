@@ -1,12 +1,12 @@
-﻿using logic.Automating;
-using logic.Automating.Scrapers;
+﻿using Application.Scrapers;
+using Application.WebSites;
 
 // Console.WriteLine("Enter the directory to download in...");
 // Console.WriteLine("To use this directory (which the program is in) type .");
 // Console.Write(">> ");
 // var dir = Console.ReadLine();
 //
-// Console.Write("Enter the url of the main page of the novel in kol novel website >> ");
+// Console.Write("Enter the url of the main page of the novel in the website (which contains the all chapters) >> ");
 // var url = Console.ReadLine();
 //
 // Console.Write(
@@ -18,7 +18,8 @@ using logic.Automating.Scrapers;
 //
 // Console.WriteLine("Kolnovel => 1, Riwyat => 2 >> ........ ");
 // var type = int.Parse(Console.ReadLine() ?? "");
-var dir = @"C:\Users\nasse\OneDrive\Desktop\KolNovel\tttttttttttttttggg";
+
+var dir = @"C:\Users\nasse\OneDrive\Desktop\KolNovel\aaaa";
 // var dir = @"./ff jj/aa f";
 var url = "https://kolnovel.com/series/revenge/";
 url =
@@ -28,20 +29,26 @@ var whiteLinesBetweenLines = 1;
 var type = 1;
 try
 {
-    AutomateScrape scrapper =
+    var scrapper =
         type switch
         {
-            1 => new KolNovelAutomateScrape(url, dir, fontSize, whiteLinesBetweenLines),
-            2 => new RiwyatAutomateScrape(url, dir, fontSize, whiteLinesBetweenLines),
+            1 => new ToPdfScraper(new KolNovel()),
+            2 => new ToPdfScraper(new Riwyat()),
             _ => throw new ArgumentException("Must be 1 or 2")
         };
+
+    scrapper.Dir = dir;
+    scrapper.Url = url;
+    scrapper.FontSize = fontSize;
+    scrapper.WhiteLinesBetweenLines = whiteLinesBetweenLines;
+    
     Console.Write(
         @"Do you want to separate the novel with volumes or custom number of chapter per file (we will get the number later)...
- true for entering the number of chapters per file or false for yes to separate with volumes?");
+true for entering the number of chapters per file or false for yes to separate with volumes.... >> ");
     bool withNoVolumesSeparators;
     try
     {
-        withNoVolumesSeparators = bool.Parse(Console.ReadLine() ?? "false");
+        withNoVolumesSeparators = bool.Parse(Console.ReadLine() ?? "");
     }
     catch (Exception e)
     {
