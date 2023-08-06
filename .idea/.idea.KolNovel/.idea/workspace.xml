@@ -9,17 +9,8 @@
     <projectFile>WpfApp/WpfApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a34e9b4-6ac0-427e-a99d-4897a645e422" name="Changes" comment="Adding MediatR To Application Layer!">
-      <change afterPath="$PROJECT_DIR$/Application/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/ConsoleApp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/ConsoleApp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/rider.project.restore.info" afterDir="false" />
+    <list default="true" id="5a34e9b4-6ac0-427e-a99d-4897a645e422" name="Changes" comment="Delete Console App">
+      <change beforePath="$PROJECT_DIR$/Scrapping.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapping.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +44,6 @@
     <setting file="file://$PROJECT_DIR$/Application/Abstractions/WebSite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Helpers/UtilityFunctions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Implementation/WebSites/KolNovel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApp/obj/Release/net7.0/win-x64/ConsoleApp.deps.json" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -81,9 +71,9 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.ConsoleApp">
-    <configuration name="make one file contains all" type="DotNetFolderPublish" factoryName="Publish to folder">
-      <riderPublish configuration="Release" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/ConsoleApp/bin/Release/net7.0/win-x64/publish" target_framework="net7.0" trim_unused_assemblies="true" uuid_high="-7107122323135315700" uuid_low="-6718964160284657330" />
+  <component name="RunManager" selected="Publish to folder.ConsoleAppToOneExe">
+    <configuration name="ConsoleAppToOneExe" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" delete_existing_files="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/ConsoleApp/bin/Release/net7.0/win-x64/publish" target_framework="net7.0" trim_unused_assemblies="true" uuid_high="-7028745093731368082" uuid_low="-4788956870707199698" />
       <method v="2" />
     </configuration>
     <configuration name="ConsoleApp" type="DotNetProject" factoryName=".NET Project">
@@ -104,47 +94,9 @@
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="WPFApp" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/WPFApp/WPFApp.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="WpfApp" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/WpfApp/WpfApp.csproj" />
-      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
-      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue=".NET Project.WPFApp" />
-      <item itemvalue=".NET Project.WpfApp" />
       <item itemvalue=".NET Project.ConsoleApp" />
-      <item itemvalue="Publish to folder.make one file contains all" />
+      <item itemvalue="Publish to folder.ConsoleAppToOneExe" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -169,7 +121,7 @@
       <workItem from="1691211683500" duration="4126000" />
       <workItem from="1691314672521" duration="13476000" />
       <workItem from="1691329223859" duration="301000" />
-      <workItem from="1691329794281" duration="16791000" />
+      <workItem from="1691329794281" duration="17578000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1689109780163</created>
@@ -206,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691350631349</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Delete Console App">
+      <created>1691353459015</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691353459015</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +190,8 @@
     <MESSAGE value="Make some of clean architecture" />
     <MESSAGE value="Refactoring..." />
     <MESSAGE value="Adding MediatR To Application Layer!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding MediatR To Application Layer!" />
+    <MESSAGE value="Delete Console App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Console App" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -276,13 +236,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ConsoleApp/Program.cs</url>
-          <line>48</line>
+          <line>47</line>
           <properties documentPath="D:\KolNovel\Tool\ConsoleApp\Program.cs" initialLine="49" containingFunctionPresentation="">
             <startOffsets>
-              <option value="1797" />
+              <option value="1793" />
             </startOffsets>
             <endOffsets>
-              <option value="2038" />
+              <option value="2034" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
