@@ -1,4 +1,4 @@
-﻿namespace Domain.Models;
+﻿namespace Domain.NovelModels;
 
 public class ChapterLinkInfo
 {

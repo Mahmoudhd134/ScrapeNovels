@@ -1,28 +1,20 @@
 ﻿using System.Diagnostics;
+using Application.Abstractions;
 using Application.DTOs;
 using Application.Helpers;
-using Application.Interfaces;
 
-namespace Infrastructure;
+namespace Infrastructure.Pdf;
 
 public class MakePdfWithWkhtmltopdf : IPdfMaker
 {
-    private readonly string _fontSize;
-    private readonly int _whiteLinesBetweenLines;
+    
 
-    public MakePdfWithWkhtmltopdf(int whiteLinesBetweenLines, string fontSize)
-    {
-        _whiteLinesBetweenLines = whiteLinesBetweenLines;
-        _fontSize = fontSize;
-    }
-
-
-    public async Task MakeFromChapters(IEnumerable<ChapterDto> content, string outputPath)
+    public async Task MakeFromChapters(IEnumerable<ChapterDto> content, string outputPath,int whiteLinesBetweenLines,string fontSize)
     {
         var dirForOutPath = Path.GetDirectoryName(outputPath);
         UtilityFunctions.CheckDirectory(dirForOutPath);
 
-        var html = MakeHtmlContent(content, _whiteLinesBetweenLines, _fontSize);
+        var html = MakeHtmlContent(content, whiteLinesBetweenLines, fontSize);
         var tempPathForHtmlFile = Path.Combine(dirForOutPath!, Guid.NewGuid() + ".html");
         await File.WriteAllTextAsync(tempPathForHtmlFile, html);
 

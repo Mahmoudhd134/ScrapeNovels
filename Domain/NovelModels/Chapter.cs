@@ -1,6 +1,6 @@
-﻿namespace Application.DTOs;
+﻿namespace Domain.NovelModels;
 
-public class ChapterDto
+public class Chapter
 {
     public string Title { get; set; }
     public IList<string> Body { get; set; }

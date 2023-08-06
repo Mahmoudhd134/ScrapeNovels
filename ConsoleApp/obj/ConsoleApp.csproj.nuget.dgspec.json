@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj": {}
+    "D:\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\Application.csproj": {
+    "D:\\KolNovel\\Tool\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\KolNovel\\Tool\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\Application.csproj",
+        "projectPath": "D:\\KolNovel\\Tool\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\nasse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\obj\\",
+        "outputPath": "D:\\KolNovel\\Tool\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nasse\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\nasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Domain\\Domain.csproj"
+              "D:\\KolNovel\\Tool\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\KolNovel\\Tool\\Domain\\Domain.csproj"
               }
             }
           }
@@ -45,6 +47,10 @@
             "HtmlAgilityPack": {
               "target": "Package",
               "version": "[1.11.46, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
             }
           },
           "imports": [
@@ -67,33 +73,35 @@
         }
       }
     },
-    "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj": {
+    "D:\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj",
+        "projectUniqueName": "D:\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj",
         "projectName": "ConsoleApp",
-        "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj",
+        "projectPath": "D:\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj",
         "packagesPath": "C:\\Users\\nasse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\obj\\",
+        "outputPath": "D:\\KolNovel\\Tool\\ConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nasse\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\nasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\Application.csproj"
+              "D:\\KolNovel\\Tool\\Application\\Application.csproj": {
+                "projectPath": "D:\\KolNovel\\Tool\\Application\\Application.csproj"
               },
-              "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj"
+              "D:\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -107,6 +115,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -127,22 +141,24 @@
         }
       }
     },
-    "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Domain\\Domain.csproj": {
+    "D:\\KolNovel\\Tool\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\KolNovel\\Tool\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Domain\\Domain.csproj",
+        "projectPath": "D:\\KolNovel\\Tool\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\nasse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Domain\\obj\\",
+        "outputPath": "D:\\KolNovel\\Tool\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nasse\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\nasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -180,30 +196,32 @@
         }
       }
     },
-    "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\KolNovel\\Tool\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\nasse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Infrastructure\\obj\\",
+        "outputPath": "D:\\KolNovel\\Tool\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nasse\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\nasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\Application\\Application.csproj"
+              "D:\\KolNovel\\Tool\\Application\\Application.csproj": {
+                "projectPath": "D:\\KolNovel\\Tool\\Application\\Application.csproj"
               }
             }
           }

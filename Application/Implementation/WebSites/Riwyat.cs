@@ -1,10 +1,10 @@
 using System.Web;
+using Application.Abstractions;
 using Application.Helpers;
-using Domain.Abstractions;
-using Domain.Models;
+using Domain.NovelModels;
 using HtmlAgilityPack;
 
-namespace Application.WebSites;
+namespace Application.Implementation.WebSites;
 
 public class Riwyat : WebSite
 {
@@ -60,7 +60,7 @@ public class Riwyat : WebSite
         return new Chapter
         {
             Title = title,
-            Body = chapter
+            Body = chapter.ToList()
         };
     }
 }

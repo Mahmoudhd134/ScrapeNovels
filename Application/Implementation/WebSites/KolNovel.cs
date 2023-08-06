@@ -1,11 +1,11 @@
 ﻿using System.Text.RegularExpressions;
 using System.Web;
+using Application.Abstractions;
 using Application.Helpers;
-using Domain.Abstractions;
-using Domain.Models;
+using Domain.NovelModels;
 using HtmlAgilityPack;
 
-namespace Application.WebSites;
+namespace Application.Implementation.WebSites;
 
 public class KolNovel : WebSite
 {
@@ -70,7 +70,7 @@ public class KolNovel : WebSite
             allVolumes.Add(new VolumeLinkInfo
             {
                 Title = content[i - 1].InnerText,
-                Chapters = lis.Reverse()
+                Chapters = lis.Reverse().ToList()
             });
         }
 
@@ -103,7 +103,7 @@ public class KolNovel : WebSite
         return new Chapter
         {
             Title = titles,
-            Body = chapter
+            Body = chapter.ToList()
         };
     }
 

@@ -1,6 +1,6 @@
-﻿using Domain.Models;
+﻿using Domain.NovelModels;
 
-namespace Domain.Abstractions;
+namespace Application.Abstractions;
 
 public abstract class WebSite
 {

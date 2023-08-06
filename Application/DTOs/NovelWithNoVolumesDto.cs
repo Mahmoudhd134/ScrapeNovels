@@ -1,7 +1,7 @@
 ﻿namespace Application.DTOs;
 
-public class VolumeDto
+public class NovelWithNoVolumesDto
 {
-    public string Title { get; set; }
+    public string Name { get; set; }
     public IList<ChapterDto> Chapters { get; set; }
 }

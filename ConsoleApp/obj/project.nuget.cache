@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "FhPInvMfOt4wqTSzlkK3Vgaj20wZtXUU9+LP1xPDbSGH44Zod8JkBZzQALNNLt2Ld35dOSoOyA74ICUi4EmYvA==",
+  "dgSpecHash": "/RsXTZuxMW2TW9bfEzhq85zxj4XrQXwhNpZ/lo7jhZhG3Bg8Cn9Ukm04VJq46vKGevAmC/IQwLHPzX8Yktx1Mw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nasse\\OneDrive\\Desktop\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj",
+  "projectFilePath": "D:\\KolNovel\\Tool\\ConsoleApp\\ConsoleApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\nasse\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512"
+    "C:\\Users\\nasse\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512",
+    "C:\\Users\\nasse\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\nasse\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\nasse\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\nasse\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
