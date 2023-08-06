@@ -1,5 +1,7 @@
-﻿using Application.Scrapers;
-using Application.WebSites;
+﻿using Application.Helpers;
+using Application.Scrapers;
+using Domain.Abstractions;
+using Infrastructure;
 
 // Console.WriteLine("Enter the directory to download in...");
 // Console.WriteLine("To use this directory (which the program is in) type .");
@@ -16,62 +18,54 @@ using Application.WebSites;
 // Console.Write("Enter the number of white spaces between each line (1,2,3...) >> ");
 // var whiteLinesBetweenLines = int.Parse(Console.ReadLine() ?? "");
 //
-// Console.WriteLine("Kolnovel => 1, Riwyat => 2 >> ........ ");
-// var type = int.Parse(Console.ReadLine() ?? "");
+// Console.WriteLine($"Choose an website\n{WebsiteUtilityFunctions.GetAllWebsites().GetFormattedString()}");
+// var websiteName = Console.ReadLine();
 
-var dir = @"C:\Users\nasse\OneDrive\Desktop\KolNovel\aaaa";
+var dir = @"C:\Users\nasse\OneDrive\Desktop\KolNovel\test";
 // var dir = @"./ff jj/aa f";
-var url = "https://kolnovel.com/series/revenge/";
-url =
-    "https://kolnovel.com/series/00%d8%a7%d9%84%d8%a8%d8%af%d8%a7%d9%8a%d8%a9-%d8%a8%d8%b9%d8%af-%d8%a7%d9%84%d9%86%d9%87%d8%a7%d9%8a%d8%a9/";
-var fontSize = "4rem";
+var url = "https://kolnovel.com/series/what-do-you-do-at-the-end-of-the-world//";
+var fontSize = "3.5rem";
 var whiteLinesBetweenLines = 1;
-var type = 1;
+var websiteName = "KolNovel";
+
+
+WebSite site;
 try
 {
-    var scrapper =
-        type switch
-        {
-            1 => new ToPdfScraper(new KolNovel()),
-            2 => new ToPdfScraper(new Riwyat()),
-            _ => throw new ArgumentException("Must be 1 or 2")
-        };
-
-    scrapper.Dir = dir;
-    scrapper.Url = url;
-    scrapper.FontSize = fontSize;
-    scrapper.WhiteLinesBetweenLines = whiteLinesBetweenLines;
-    
-    Console.Write(
-        @"Do you want to separate the novel with volumes or custom number of chapter per file (we will get the number later)...
-true for entering the number of chapters per file or false for yes to separate with volumes.... >> ");
-    bool withNoVolumesSeparators;
-    try
-    {
-        withNoVolumesSeparators = bool.Parse(Console.ReadLine() ?? "");
-    }
-    catch (Exception e)
-    {
-        withNoVolumesSeparators = false;
-    }
-
-    if (withNoVolumesSeparators)
-    {
-        Console.Write("Number of chapters per file >> ");
-        await scrapper.StartWithNoVolumesSeparators(int.Parse(Console.ReadLine() ?? "300"));
-    }
-    else
-        await scrapper.StartWithVolumesSeparators();
+    site = WebsiteUtilityFunctions.GetWebsite(websiteName, url);
 }
 catch (Exception e)
 {
     Console.WriteLine(e.Message);
-    Console.WriteLine(e.InnerException?.Message);
-    Console.WriteLine(e);
-    Console.ReadLine();
     throw;
 }
 
+var scrapper = new ToPdfScraper(site, new MakePdfWithWkhtmltopdf(whiteLinesBetweenLines, fontSize), dir);
+
+
+Console.Write(
+    @"Do you want to separate the novel with volumes or custom number of chapter per file (we will get the number later)...
+true for entering the number of chapters per file or false for yes to separate with volumes.... >> ");
+bool withNoVolumesSeparators;
+try
+{
+    withNoVolumesSeparators = bool.Parse(Console.ReadLine() ?? "");
+}
+catch (Exception e)
+{
+    withNoVolumesSeparators = false;
+}
+
+
+if (withNoVolumesSeparators)
+{
+    Console.Write("Number of chapters per file >> ");
+    await scrapper.StartWithNoVolumesSeparators(int.Parse(Console.ReadLine() ?? "100"));
+}
+else
+{
+    await scrapper.StartWithVolumesSeparators();
+}
 
 Console.WriteLine("Press any key to exit!");
 Console.ReadLine();

@@ -9,7 +9,7 @@
     ".NETCoreApp,Version=v7.0/win-x64": {
       "ConsoleApp/1.0.0": {
         "dependencies": {
-          "logic": "1.0.0",
+          "Application": "1.0.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.3"
         },
         "runtime": {
@@ -744,12 +744,18 @@
           }
         }
       },
-      "logic/1.0.0": {
+      "Application/1.0.0": {
         "dependencies": {
+          "Domain": "1.0.0",
           "HtmlAgilityPack": "1.11.46"
         },
         "runtime": {
-          "logic.dll": {}
+          "Application.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "runtime": {
+          "Domain.dll": {}
         }
       }
     }
@@ -772,7 +778,12 @@
       "path": "htmlagilitypack/1.11.46",
       "hashPath": "htmlagilitypack.1.11.46.nupkg.sha512"
     },
-    "logic/1.0.0": {
+    "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

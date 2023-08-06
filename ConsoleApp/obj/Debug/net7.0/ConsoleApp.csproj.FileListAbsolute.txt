@@ -36,3 +36,5 @@ C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Applic
 C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Domain.dll
 C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Application.pdb
 C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Domain.pdb
+C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Infrastructure.dll
+C:\Users\nasse\OneDrive\Desktop\KolNovel\Tool\ConsoleApp\bin\Debug\net7.0\Infrastructure.pdb

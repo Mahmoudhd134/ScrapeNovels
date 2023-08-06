@@ -6,19 +6,23 @@ using HtmlAgilityPack;
 
 namespace Application.WebSites;
 
-public class Riwyat : IWebSite
+public class Riwyat : WebSite
 {
-    public async Task<IList<ChapterLinkInfo>> GetAllPages(string url)
+    public Riwyat(string baseUrl) : base(baseUrl)
+    {
+    }
+
+    public override async Task<IList<ChapterLinkInfo>> GetAllPages()
     {
         var doc = new HtmlDocument();
-        var html = await UtilityFunctions.GetHtmlFromUrl(url);
+        var html = await UtilityFunctions.GetHtmlFromUrl(BaseUrl);
         doc.LoadHtml(html);
 
         var allLi = doc.DocumentNode.Descendants("li")
             .Where(li => li.GetAttributeValue("class", "").Contains("wp-manga-chapter"));
 
         return allLi.Select(li =>
-                new ChapterLinkInfo()
+                new ChapterLinkInfo
                 {
                     Url = li.Descendants("a").First().GetAttributeValue("href", "NO LINK FOUND #CUSTOM ERROR#"),
                     Info = li.InnerText
@@ -27,12 +31,17 @@ public class Riwyat : IWebSite
             .ToList();
     }
 
-    public Task<IList<VolumeLinkInfo>> GetVolumePages(string url)
+    public override Task<IList<VolumeLinkInfo>> GetVolumePages()
     {
         throw new NotImplementedException();
     }
 
-    public async Task<Chapter> GetChapter(string url)
+    public override Task<string> GetNovelName()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override async Task<Chapter> GetChapter(string url)
     {
         var doc = new HtmlDocument();
         var html = await UtilityFunctions.GetHtmlFromUrl(url);

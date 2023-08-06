@@ -2,11 +2,14 @@
 
 public abstract class Scraper
 {
-    protected readonly IWebSite WebSite;
+    protected readonly WebSite WebSite;
 
-    protected Scraper() => throw new ArgumentException("You must specified an object implements IWebsite interface");
+    protected Scraper()
+    {
+        throw new ArgumentException("You must specified an object implements IWebsite interface");
+    }
 
-    protected Scraper(IWebSite webSite)
+    protected Scraper(WebSite webSite)
     {
         WebSite = webSite;
     }
