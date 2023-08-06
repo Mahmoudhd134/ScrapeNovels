@@ -9,62 +9,17 @@
     <projectFile>WpfApp/WpfApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a34e9b4-6ac0-427e-a99d-4897a645e422" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/DTOs/NovelWithNoVolumesDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Helpers/ExtentionMethods.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Helpers/WebsitesUtilityFunctions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Implementation/WebSites/AllWebsites.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/MediatR/NovelToPdf/MakePdfByCustomSeparator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/MediatR/NovelToPdf/MakePdfByVolumeSeparators.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/MediatR/Novle/GetChapter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/MediatR/Novle/GetNovelWithNoChaptersSeparator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/MediatR/Novle/GetNovelWithVolumesSeparator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/NovelModels/Novel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/NovelModels/Volume.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/DTOs/ChapterDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/DTOs/ChapterDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/DTOs/Novel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/DTOs/NovelDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/DTOs/VolumeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/DTOs/VolumeDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/GlobalUsing.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Helpers/ExtendedIEnumerableMethods.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Helpers/WebsiteUtilityFunctions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Interfaces/IPdfMaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Abstractions/IPdfMaker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Scrapers/ToPdfScraper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Scrapers/ToPdfScraper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/WebSites/KolNovel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Implementation/WebSites/KolNovel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/WebSites/Riwyat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Implementation/WebSites/Riwyat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/ConsoleApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/ConsoleApp.csproj" afterDir="false" />
+    <list default="true" id="5a34e9b4-6ac0-427e-a99d-4897a645e422" name="Changes" comment="Adding MediatR To Application Layer!">
+      <change afterPath="$PROJECT_DIR$/Application/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/bin/Debug/net7.0/ConsoleApp.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/bin/Debug/net7.0/ConsoleApp.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/bin/Debug/net7.0/ConsoleApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/bin/Debug/net7.0/ConsoleApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/bin/Debug/net7.0/ConsoleApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/bin/Debug/net7.0/ConsoleApp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/ConsoleApp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/ConsoleApp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ConsoleApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ref/ConsoleApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/ref/ConsoleApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/refint/ConsoleApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/Debug/net7.0/refint/ConsoleApp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Abstractions/Scraper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Abstractions/WebSite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Abstractions/WebSite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/Chapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/NovelModels/Chapter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/ChapterLinkInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/NovelModels/ChapterLinkInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Models/VolumeLinkInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/NovelModels/VolumeLinkInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/MakePdfWithWkhtmltopdf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Pdf/MakePdfWithWkhtmltopdf.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KolNovel.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapping.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +53,6 @@
     <setting file="file://$PROJECT_DIR$/Application/Abstractions/WebSite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Helpers/UtilityFunctions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Implementation/WebSites/KolNovel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Scrapers/ToPdfScraper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp/obj/Release/net7.0/win-x64/ConsoleApp.deps.json" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -215,7 +169,7 @@
       <workItem from="1691211683500" duration="4126000" />
       <workItem from="1691314672521" duration="13476000" />
       <workItem from="1691329223859" duration="301000" />
-      <workItem from="1691329794281" duration="14340000" />
+      <workItem from="1691329794281" duration="16791000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1689109780163</created>
@@ -245,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691327557799</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adding MediatR To Application Layer!">
+      <created>1691350631349</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691350631349</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,12 +214,24 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="update" />
     <MESSAGE value="Make some of clean architecture" />
     <MESSAGE value="Refactoring..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring..." />
+    <MESSAGE value="Adding MediatR To Application Layer!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding MediatR To Application Layer!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -303,13 +276,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ConsoleApp/Program.cs</url>
-          <line>47</line>
+          <line>48</line>
           <properties documentPath="D:\KolNovel\Tool\ConsoleApp\Program.cs" initialLine="49" containingFunctionPresentation="">
             <startOffsets>
-              <option value="1848" />
+              <option value="1797" />
             </startOffsets>
             <endOffsets>
-              <option value="2089" />
+              <option value="2038" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="33" />
