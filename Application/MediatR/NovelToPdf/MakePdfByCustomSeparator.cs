@@ -1,14 +1,15 @@
-﻿using Application.Abstractions;
-using Application.DTOs;
+﻿using Application.DTOs.Novel;
 using Application.Helpers;
+using Application.Interfaces;
 using Application.MediatR.Novle;
+using Domain.Websites;
 using MediatR;
 
 namespace Application.MediatR.NovelToPdf;
 
 public class MakePdfByCustomSeparator
 {
-    public record Query(WebSite WebSite, string Dir, string FontSize, int WhiteLinesBetweenLines,
+    public record Query(NovelWebsite Website, string BaseUrl, string Dir, string FontSize, int WhiteLinesBetweenLines,
         int NumberOfChaptersPerFile) : IRequest;
 
     public class Handler : IRequestHandler<Query>
@@ -24,10 +25,11 @@ public class MakePdfByCustomSeparator
 
         public async Task Handle(Query request, CancellationToken cancellationToken)
         {
-            var (webSite, dir, fontSize, whiteLinesBetweenLines, numberOfChaptersPerFile) = request;
-            var novel = await _mediator.Send(new GetNovelWithNoChaptersSeparator.Query(webSite), cancellationToken);
+            var (webSite, baseUrl, dir, fontSize, whiteLinesBetweenLines, numberOfChaptersPerFile) = request;
+            var novel = await _mediator.Send(new GetNovelWithNoChaptersSeparator.Query(webSite, baseUrl),
+                cancellationToken);
 
-            var chaptersCount = novel.Chapters.Count();
+            var chaptersCount = novel.Chapters.Count;
             var count = chaptersCount / (double)numberOfChaptersPerFile;
             var intCount = (int)count;
             var reminder = (int)((count - intCount) * numberOfChaptersPerFile);
@@ -37,14 +39,15 @@ public class MakePdfByCustomSeparator
                 var chapters = novel.Chapters
                     .Skip(i * numberOfChaptersPerFile)
                     .Take(numberOfChaptersPerFile);
-            
-                await HandleFiles(i * numberOfChaptersPerFile + 1, (i + 1) * numberOfChaptersPerFile, dir, chapters, whiteLinesBetweenLines, fontSize);
+
+                await HandleFiles(i * numberOfChaptersPerFile + 1, (i + 1) * numberOfChaptersPerFile, dir, chapters,
+                    whiteLinesBetweenLines, fontSize);
             }
 
             if (reminder != 0)
             {
                 var chapters = novel.Chapters.TakeLast(reminder);
-                await HandleFiles(chaptersCount - reminder + 1 , chaptersCount, dir,
+                await HandleFiles(chaptersCount - reminder + 1, chaptersCount, dir,
                     chapters,
                     whiteLinesBetweenLines, fontSize);
             }

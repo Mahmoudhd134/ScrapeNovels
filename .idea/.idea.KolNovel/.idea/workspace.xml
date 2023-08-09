@@ -9,8 +9,8 @@
     <projectFile>WpfApp/WpfApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a34e9b4-6ac0-427e-a99d-4897a645e422" name="Changes" comment="Delete Console App">
-      <change beforePath="$PROJECT_DIR$/Scrapping.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapping.sln" afterDir="false" />
+    <list default="true" id="5a34e9b4-6ac0-427e-a99d-4897a645e422" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KolNovel/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Publish to folder.ConsoleAppToOneExe">
+  <component name="RunManager" selected=".NET Project.ConsoleApp">
     <configuration name="ConsoleAppToOneExe" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/ConsoleApp/bin/Release/net7.0/win-x64/publish" target_framework="net7.0" trim_unused_assemblies="true" uuid_high="-7028745093731368082" uuid_low="-4788956870707199698" />
       <method v="2" />
@@ -121,7 +121,7 @@
       <workItem from="1691211683500" duration="4126000" />
       <workItem from="1691314672521" duration="13476000" />
       <workItem from="1691329223859" duration="301000" />
-      <workItem from="1691329794281" duration="17578000" />
+      <workItem from="1691329794281" duration="18031000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1689109780163</created>
@@ -165,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691353459015</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Console App">
+      <created>1691353785883</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691353785883</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +198,8 @@
     <MESSAGE value="Refactoring..." />
     <MESSAGE value="Adding MediatR To Application Layer!" />
     <MESSAGE value="Delete Console App" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete Console App" />
+    <MESSAGE value="Add Console App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Console App" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

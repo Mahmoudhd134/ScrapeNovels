@@ -1,7 +1,8 @@
 ﻿using System.Diagnostics;
-using Application.Abstractions;
 using Application.DTOs;
+using Application.DTOs.Novel;
 using Application.Helpers;
+using Application.Interfaces;
 
 namespace Infrastructure.Pdf;
 

@@ -1,6 +1,7 @@
 ﻿using Application.DTOs;
+using Application.DTOs.Novel;
 
-namespace Application.Abstractions;
+namespace Application.Interfaces;
 
 public interface IPdfMaker
 {

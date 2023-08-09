@@ -1,4 +1,4 @@
-﻿namespace Application.Implementation.WebSites;
+﻿namespace Application.Implementation.NovelWebsites;
 
 public enum AllWebsites
 {

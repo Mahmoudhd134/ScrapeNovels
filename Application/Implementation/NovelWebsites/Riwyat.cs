@@ -1,21 +1,18 @@
 using System.Web;
-using Application.Abstractions;
 using Application.Helpers;
 using Domain.NovelModels;
+using Domain.Websites;
 using HtmlAgilityPack;
 
-namespace Application.Implementation.WebSites;
+namespace Application.Implementation.NovelWebsites;
 
-public class Riwyat : WebSite
+public class Riwyat : NovelWebsite
 {
-    public Riwyat(string baseUrl) : base(baseUrl)
-    {
-    }
 
-    public override async Task<IList<ChapterLinkInfo>> GetAllPages()
+    public override async Task<IList<ChapterLinkInfo>> GetAllPages(string url)
     {
         var doc = new HtmlDocument();
-        var html = await UtilityFunctions.GetHtmlFromUrl(BaseUrl);
+        var html = await UtilityFunctions.GetHtmlFromUrl(url);
         doc.LoadHtml(html);
 
         var allLi = doc.DocumentNode.Descendants("li")
@@ -31,12 +28,12 @@ public class Riwyat : WebSite
             .ToList();
     }
 
-    public override Task<IList<VolumeLinkInfo>> GetVolumePages()
+    public override Task<IList<VolumeLinkInfo>> GetVolumePages(string url)
     {
         throw new NotImplementedException();
     }
 
-    public override Task<string> GetNovelName()
+    public override Task<string> GetNovelName(string url)
     {
         throw new NotImplementedException();
     }

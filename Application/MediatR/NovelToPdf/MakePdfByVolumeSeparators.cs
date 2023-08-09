@@ -1,13 +1,15 @@
-﻿using Application.Abstractions;
-using Application.Helpers;
+﻿using Application.Helpers;
+using Application.Interfaces;
 using Application.MediatR.Novle;
+using Domain.Websites;
 using MediatR;
 
 namespace Application.MediatR.NovelToPdf;
 
 public class MakePdfByVolumeSeparators
 {
-    public record Query(WebSite WebSite, string Dir, string FontSize, int WhiteLinesBetweenLines) : IRequest;
+    public record Query(NovelWebsite Website, string BaseUrl, string Dir, string FontSize,
+        int WhiteLinesBetweenLines) : IRequest;
 
     public class Handler : IRequestHandler<Query>
     {
@@ -22,8 +24,9 @@ public class MakePdfByVolumeSeparators
 
         public async Task Handle(Query request, CancellationToken cancellationToken)
         {
-            var (webSite, dir, fontSize, whiteLinesBetweenLines) = request;
-            var novel = await _mediator.Send(new GetNovelWithVolumesSeparator.Query(webSite), cancellationToken);
+            var (webSite,baseUrl, dir, fontSize, whiteLinesBetweenLines) = request;
+            var novel = await _mediator.Send(new GetNovelWithVolumesSeparator.Query(webSite, baseUrl),
+                cancellationToken);
 
             var lastChapter = 0;
             foreach (var (volume, i) in novel.Volumes.Select((v, i) => (v, i)))

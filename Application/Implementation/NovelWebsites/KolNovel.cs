@@ -1,21 +1,17 @@
 ﻿using System.Text.RegularExpressions;
 using System.Web;
-using Application.Abstractions;
 using Application.Helpers;
 using Domain.NovelModels;
+using Domain.Websites;
 using HtmlAgilityPack;
 
-namespace Application.Implementation.WebSites;
+namespace Application.Implementation.NovelWebsites;
 
-public class KolNovel : WebSite
+public class KolNovel : NovelWebsite
 {
-    public KolNovel(string baseUrl) : base(baseUrl)
+    public override async Task<IList<ChapterLinkInfo>> GetAllPages(string url)
     {
-    }
-
-    public override async Task<IList<ChapterLinkInfo>> GetAllPages()
-    {
-        var htmlDocument = await GetDocument(BaseUrl);
+        var htmlDocument = await GetDocument(url);
 
         return htmlDocument.DocumentNode.Descendants("div")
             .Where(n => n.GetAttributeValue("class", "").Equals("bixbox bxcl epcheck"))
@@ -32,9 +28,9 @@ public class KolNovel : WebSite
             .ToList();
     }
 
-    public override async Task<IList<VolumeLinkInfo>> GetVolumePages()
+    public override async Task<IList<VolumeLinkInfo>> GetVolumePages(string url)
     {
-        var doc = await GetDocument(BaseUrl);
+        var doc = await GetDocument(url);
 
         var content = doc.DocumentNode.Descendants("div")
             .Single(d => d.GetAttributeValue("class", "").Equals("bixbox bxcl epcheck"))
@@ -79,9 +75,9 @@ public class KolNovel : WebSite
         return allVolumes;
     }
 
-    public override async Task<string> GetNovelName()
+    public override async Task<string> GetNovelName(string url)
     {
-        return (await GetDocument(BaseUrl)).DocumentNode.Descendants("h1")
+        return (await GetDocument(url)).DocumentNode.Descendants("h1")
             .Single(h1 => h1.GetAttributeValue("class", "").Equals("entry-title"))
             .InnerText;
     }

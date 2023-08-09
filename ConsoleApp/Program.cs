@@ -1,8 +1,9 @@
 ﻿using Application;
-using Application.Abstractions;
 using Application.Helpers;
-using Application.Implementation.WebSites;
+using Application.Implementation.NovelWebsites;
+using Application.Interfaces;
 using Application.MediatR.NovelToPdf;
+using Domain.Websites;
 using Infrastructure.Pdf;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,7 +23,7 @@ using Microsoft.Extensions.DependencyInjection;
 // Console.Write("Enter the number of white spaces between each line (1,2,3...) >> ");
 // var whiteLinesBetweenLines = int.Parse(Console.ReadLine() ?? "");
 //
-// Console.WriteLine($"Choose an website\n{WebsitesUtilityFunctions.AllWebsitesNames.GetFormattedString()}");
+// Console.WriteLine($"Choose an website\n{NovelWebsite.AllWebsitesNames.GetFormattedString()}");
 // var websiteName = Console.ReadLine();
 
 var dir = @"C:\Users\nasse\OneDrive\Desktop\KolNovel\test";
@@ -37,13 +38,13 @@ var serviceProvider = new ServiceCollection()
     .AddScoped<IPdfMaker, MakePdfWithWkhtmltopdf>()
     .BuildServiceProvider();
 
-var mediatR = serviceProvider.GetRequiredService<IMediator>();
+var mediator = serviceProvider.GetRequiredService<IMediator>();
 
 var success = Enum.TryParse<AllWebsites>(websiteName, true, out var websiteEnum);
 if (!success)
     websiteEnum = AllWebsites.NotFound;
 
-var webSite = WebsitesUtilityFunctions.GetWebSite(websiteEnum, url);
+var webSite = WebsiteUtilityFunctions.GetNovelWebsite(websiteEnum);
 
 Console.Write(
     @"Do you want to separate the novel with volumes or custom number of chapter per file (we will get the number later)...
@@ -62,12 +63,12 @@ catch (Exception e)
 if (withNoVolumesSeparators)
 {
     Console.Write("Number of chapters per file >> ");
-    await mediatR.Send(new MakePdfByCustomSeparator.Query(webSite, dir, fontSize, whiteLinesBetweenLines,
+    await mediator.Send(new MakePdfByCustomSeparator.Query(webSite, url, dir, fontSize, whiteLinesBetweenLines,
         int.Parse(Console.ReadLine() ?? "200")));
 }
 else
 {
-    await mediatR.Send(new MakePdfByVolumeSeparators.Query(webSite, dir, fontSize, whiteLinesBetweenLines));
+    await mediator.Send(new MakePdfByVolumeSeparators.Query(webSite, url, dir, fontSize, whiteLinesBetweenLines));
 }
 
 Console.WriteLine("Press any key to exit!");
