@@ -16,6 +16,7 @@ public class WebsiteUtilityFunctions
         {
             AllWebsites.KolNovel => () => new KolNovel(),
             AllWebsites.Riwyat => () => new Riwyat(),
+            AllWebsites.Shuba69 => () => new Shuba69(),
             AllWebsites.NotFound => throw ex,
             _ => throw ex
         };

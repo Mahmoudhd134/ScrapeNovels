@@ -1,12 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\Application\Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EpubCore" Version="1.6.2" />
+      <PackageReference Include="EPubSharp" Version="0.4.2" />
+      <PackageReference Include="NovelEpubMaker" Version="1.0.1" />
+      <PackageReference Include="VersOne.Epub" Version="3.3.4" />
     </ItemGroup>
 
 </Project>

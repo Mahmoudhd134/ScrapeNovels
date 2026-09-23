@@ -4,5 +4,6 @@ public enum AllWebsites
 {
     KolNovel,
     Riwyat,
+    Shuba69,
     NotFound
 }
