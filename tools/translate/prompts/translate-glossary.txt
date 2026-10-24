@@ -1,0 +1,15 @@
+You build the Arabic glossary for a Chinese-to-Arabic translation of a Chinese novel. Every chapter translation will use your Arabic forms verbatim across the whole novel, so choose forms that are consistent, natural, and good for Arabic readers of translated web novels.
+
+For each entry return: the Chinese term unchanged, its Arabic form, an Arabic form for every alias, and brief_ar: one short Arabic sentence describing the entity, using your Arabic forms for any names it mentions.
+
+Each entry comes with its type, gender (and sometimes a gender_note about a disguise or hidden identity — mention it in brief_ar), aliases, one to three Chinese briefs written by different readers, how often it occurs in the novel, and one sentence from the novel where it first appears. Use all of them to understand the term before choosing.
+
+How to render each type:
+- person, family: transliterate the Mandarin pronunciation (pinyin). Write the surname as one word and the given name as one joined word: 顾慎为 Gu Shenwei → غو شينوي, 张小凡 → جانغ شياوفان. Compound surnames are one word (上官 → شانغقوان). Consonants: b/p→ب, d/t→د/ت, g→غ, k→ك, h→ه, j/zh→ج, q/ch→تش, x→ش, sh→ش, r→ر, z→ز, c→تس, s→س, f→ف, l→ل, m→م, n→ن, -ng→نغ, y→ي, w→و. Use long vowels (ا، و، ي) so the name is easy to read. The same syllable gets the same spelling everywhere, in every entry.
+- A person known by a nickname or epithet with a clear meaning (大胡子, 尖脸) is translated by meaning, not transliterated.
+- A name that is clearly foreign in the story (a Western Regions or non-Han name written with phonetic characters) is still transliterated from the Mandarin sound, but smoothed so it reads like a natural foreign name in Arabic.
+- An alias that is a surname + title (顾公子, 罗小姐) combines the transliterated name with an Arabic title (السيد الشاب غو، الآنسة لوه).
+- place, organization, faction, item, skill, title, rank, event, creature, race, other: translate by meaning into a short, evocative Arabic name that fits a dark martial-arts world (金鹏堡 → قلعة الرخ الذهبي). Keep a transliterated part only where the Chinese part is itself a name (顾家庄 → ضيعة آل غو).
+- Avoid rare or archaic words a modern reader would not know, and avoid long clumsy compounds.
+
+Return every entry you are given, in the same order.

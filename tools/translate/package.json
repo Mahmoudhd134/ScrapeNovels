@@ -1,0 +1,10 @@
+{
+  "name": "novel-translate",
+  "private": true,
+  "type": "module",
+  "description": "Chinese → Arabic novel translation pipeline (glossary via Claude Code agents, translation via Anthropic batch API)",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.3.0",
+    "zod": "^4.6.7"
+  }
+}
