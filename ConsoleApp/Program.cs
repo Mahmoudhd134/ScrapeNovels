@@ -6,6 +6,8 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 // Usage: dotnet run -- [url] [websiteName] [outputDir]
+// Each chapter is saved under <outputDir>/<novel name>/ as it is scraped; re-running the same
+// command resumes from there. The combined <novel name>.json is written once all chapters succeed.
 var url = args.ElementAtOrDefault(0) ?? "https://cenele.com/cont/kingm-bline/";
 var websiteName = args.ElementAtOrDefault(1) ?? "Riwyat";
 var dir = args.ElementAtOrDefault(2) ?? @"D:\SideProjects\ScrapeNovels\jsons";
@@ -28,7 +30,7 @@ if (websiteEnum == AllWebsites.Shuba69)
 {
     Console.WriteLine($"Downloading (no volume separators): {url}");
 
-    var flatNovel = await mediator.Send(new GetNovelWithNoChaptersSeparator.Query(webSite, url));
+    var flatNovel = await mediator.Send(new GetNovelWithNoChaptersSeparator.Query(webSite, url, dir));
 
     var flatFileName = UtilityFunctions.MakeValidFileNameFromString(
         string.IsNullOrWhiteSpace(flatNovel.Name) ? "novel" : flatNovel.Name.Trim());
@@ -45,7 +47,7 @@ if (websiteEnum == AllWebsites.Shuba69)
 
 Console.WriteLine($"Downloading (with volume separators): {url}");
 
-var novel = await mediator.Send(new GetNovelWithVolumesSeparator.Query(webSite, url));
+var novel = await mediator.Send(new GetNovelWithVolumesSeparator.Query(webSite, url, dir));
 
 var fileName = UtilityFunctions.MakeValidFileNameFromString(
     string.IsNullOrWhiteSpace(novel.Name) ? "novel" : novel.Name.Trim());
