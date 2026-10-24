@@ -1,0 +1,13 @@
+# FlareSolverr: local proxy that solves Cloudflare challenges with a headless browser.
+# Start:  docker compose up -d
+# API:    POST http://localhost:8191/v1  {"cmd":"request.get","url":"...","maxTimeout":60000}
+services:
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=info
+      - TZ=UTC
+    ports:
+      - "8191:8191"
+    restart: unless-stopped

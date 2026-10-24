@@ -1,2 +1,5 @@
 # Scraped novel output data
 jsons/
+
+# Novel downloads (scraped content)
+output/

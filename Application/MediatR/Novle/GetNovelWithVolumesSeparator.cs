@@ -36,7 +36,8 @@ public class GetNovelWithVolumesSeparator
                         Console.WriteLine($">> End Chapter {j + 1} In Volume {i + 1}");
                         return new ChapterDto()
                         {
-                            Title = $"{ch.Info}   {chapter.Title}",
+                            // Some sites' page title is the catalog title itself; don't repeat it.
+                            Title = chapter.Title == ch.Info ? ch.Info : $"{ch.Info}   {chapter.Title}",
                             Body = chapter.Body
                         };
                     });

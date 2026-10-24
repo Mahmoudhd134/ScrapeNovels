@@ -27,7 +27,8 @@ public class GetNovelWithNoChaptersSeparator
                     Console.WriteLine($">> End Chapter {i + 1}");
                     return new ChapterDto()
                     {
-                        Title = $"{p.Info}    {chapter.Title}",
+                        // Some sites' page title is the catalog title itself; don't repeat it.
+                        Title = chapter.Title == p.Info ? p.Info : $"{p.Info}    {chapter.Title}",
                         Body = chapter.Body
                     };
                 });
